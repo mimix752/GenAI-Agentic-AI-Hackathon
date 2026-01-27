@@ -1,0 +1,99 @@
+.job-description-section {
+  margin-bottom: 50px;
+  position: relative;
+}
+
+/* Container */
+
+.textarea-container {
+  position: relative;
+}
+
+/* Glass textarea */
+
+.job-textarea {
+  width: 100%;
+  min-height: 220px;
+  padding: 22px;
+
+  background: rgba(255,255,255,0.06);   /* transparent glass */
+  backdrop-filter: blur(10px);
+
+  border: 1.5px solid rgba(255,255,255,0.18);
+  border-radius: 20px;
+
+  color: #ffffff;
+  font-size: 1rem;
+  font-family: 'Inter', sans-serif;
+  resize: vertical;
+  line-height: 1.6;
+
+  box-shadow:
+    0 8px 35px rgba(0,0,0,0.35),
+    inset 0 0 0 1px rgba(255,255,255,0.05);
+
+  transition: all 0.35s ease;
+}
+
+/* Focus glow */
+
+.job-textarea:focus {
+  outline: none;
+  border-color: #667eea;
+
+  box-shadow:
+    0 0 0 2px rgba(102,126,234,0.35),
+    0 12px 50px rgba(102,126,234,0.45);
+}
+
+/* Invalid */
+
+.job-textarea.invalid {
+  border-color: rgba(239,68,68,0.8);
+  box-shadow: 0 0 25px rgba(239,68,68,0.5);
+}
+
+.job-textarea.invalid:focus {
+  box-shadow:
+    0 0 0 2px rgba(239,68,68,0.4),
+    0 12px 40px rgba(239,68,68,0.5);
+}
+
+/* Placeholder */
+
+.job-textarea::placeholder {
+  color: rgba(255,255,255,0.6);
+}
+
+/* Footer */
+
+.textarea-footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 12px;
+  padding: 0 6px;
+}
+
+/* Counter */
+
+.char-count {
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.char-count.valid {
+  color: #7dd3fc;
+}
+
+.char-count.invalid {
+  color: #ef4444;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .job-textarea {
+    min-height: 190px;
+    padding: 18px;
+  }
+}
